@@ -50,7 +50,7 @@ TagManager:
   - name: Player
     uniqueID: 1951975025
     locked: 0
-  - name: Instances
+  - name: shadow
     uniqueID: 2359684005
     locked: 0
   - name: Foreground
