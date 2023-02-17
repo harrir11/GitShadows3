@@ -41,18 +41,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: Outside
     uniqueID: 1388957025
     locked: 0
-  - name: Middleground
+  - name: Wall
     uniqueID: 2987815805
     locked: 0
-  - name: Player
+  - name: Background
     uniqueID: 1951975025
     locked: 0
-  - name: Instances
+  - name: Middleground
     uniqueID: 2359684005
     locked: 0
-  - name: Foreground
+  - name: Player
     uniqueID: 2867056507
+    locked: 0
+  - name: Shadow
+    uniqueID: 1349861257
+    locked: 0
+  - name: Foreground
+    uniqueID: 2980468311
     locked: 0
