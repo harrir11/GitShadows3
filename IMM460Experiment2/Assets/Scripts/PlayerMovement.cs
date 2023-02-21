@@ -9,41 +9,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // public float speed = 5f;
-    // public float playAreaWidth = 9f;
-    // public float playAreaHeight = 9f;
-    // public Color playAreaColor = Color.green;
-
-    // private Vector3 targetPosition;
-
-    // private void OnDrawGizmos()
-    // {
-    //     Gizmos.color = playAreaColor;
-    //     Gizmos.DrawWireCube(Vector3.zero, new Vector3(playAreaWidth, playAreaHeight, 0f));
-    // }
-
-    // private void Update()
-    // {
-    //     if (Input.GetMouseButtonDown(0))
-    //     {
-    //         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-    //         Plane groundPlane = new Plane(Vector3.forward, Vector3.zero);
-    //         float distance;
-    //         if (groundPlane.Raycast(ray, out distance))
-    //         {
-    //             Vector3 hitPoint = ray.GetPoint(distance);
-    //             targetPosition = new Vector3(hitPoint.x, hitPoint.y, transform.position.z);
-    //             targetPosition = new Vector3(
-    //                 Mathf.Clamp(targetPosition.x, -playAreaWidth / 2, playAreaWidth / 2),
-    //                 Mathf.Clamp(targetPosition.y, -playAreaHeight / 2, playAreaHeight / 2),
-    //                 targetPosition.z
-    //             );
-    //         }
-    //     }
-
-    //     transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-    // }
-    
     public float speed = 5f;
     public Color playAreaColor = Color.green;
 
@@ -76,13 +41,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 Vector3 hitPoint = ray.GetPoint(distance);
                 targetPosition = new Vector3(hitPoint.x, hitPoint.y, transform.position.z);
-
-                // Check if the target position is inside the play area
-                if (IsPointInsidePlayArea(targetPosition))
-                {
-                    transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-                }
             }
+        }
+        
+        // Check if the target position is inside the play area
+        if (IsPointInsidePlayArea(targetPosition))
+        {
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
         }
     }
 

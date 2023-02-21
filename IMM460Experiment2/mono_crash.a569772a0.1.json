@@ -22,6 +22,7 @@
     "minor_gc_count" : "0",
     "major_gc_count" : "5",
     "major_gc_time_concurrent" : "0"
+ },
   "threads" : [
  {
     "is_managed" : true,
