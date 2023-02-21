@@ -40,7 +40,7 @@ public class Window : MonoBehaviour
             Vector3 newCurtainPosition = new Vector3(curtainX, curtainTransform.position.y, curtainTransform.position.y);
             curtainTransform.position = newCurtainPosition;
         }
-        else{
+        else {
             curtainIsOpen = false;
         }
 
