@@ -1,10 +1,10 @@
 # This .gitignore file should be placed at the root of your Unity project directory
-#
 # Get latest from https://github.com/github/gitignore/blob/master/Unity.gitignore
-#
+
 /[Ll]ibrary/
-/[Tt]emp/
-/[Oo]bj/
+/[Uu]serSettings/
+[Tt]emp/
+[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /[Ll]ogs/
@@ -58,3 +58,15 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Modified from:
+# https://github.com/github/gitignore/blob/master/Unity.gitignore
+
+# Windows
+Thumbs.db
+Thumbs.db.meta
+
+# MacOS
+*.DS_Store
+
+# VS Code
+*.vscode
