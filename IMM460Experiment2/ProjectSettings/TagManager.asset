@@ -50,6 +50,9 @@ TagManager:
   - name: Middleground
     uniqueID: 2987815805
     locked: 0
+  - name: Floor
+    uniqueID: 1023098091
+    locked: 0
   - name: Player
     uniqueID: 1951975025
     locked: 0
