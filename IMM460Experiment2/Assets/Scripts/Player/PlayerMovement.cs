@@ -1,6 +1,6 @@
 /*
     Name: Connie Huang
-    Last modified: 2023-02-21
+    Last modified: 2023-02-28
 */
 
 using System.Collections;
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Plane groundPlane = new Plane(Vector3.forward, Vector3.zero);
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
                 targetPosition = new Vector3(hitPoint.x, hitPoint.y, transform.position.z);
             }
         }
-        
+
         // Check if the target position is inside the play area
         if (IsPointInsidePlayArea(targetPosition))
         {
