@@ -14,4 +14,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Kitchen_RH.unity
     guid: 3a766ae8ca74447aabc013146db4523b
+  - enabled: 1
+    path: Assets/Scenes/Hallway_RH.unity
+    guid: 19218783491e44b1598bbc7fba155cd0
+  - enabled: 1
+    path: Assets/Scenes/Basement_RH.unity
+    guid: 8db35de46acaf4d45bae2b7f0dd01d89
+  - enabled: 1
+    path: Assets/Scenes/Bathroom_RH.unity
+    guid: 5a28706a6acea41599fb07077c22f00a
+  - enabled: 1
+    path: Assets/Scenes/StaircasetoBasement_RH.unity
+    guid: b3d8d3babae0d4448bdf5c3d0d713165
+  - enabled: 1
+    path: Assets/Scenes/StaircasetoRoom_RH.unity
+    guid: 7f2276608efd846088720eb0c1d3d787
   m_configObjects: {}
