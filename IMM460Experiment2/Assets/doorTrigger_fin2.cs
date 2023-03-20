@@ -5,10 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class doorTrigger_fin2 : MonoBehaviour
 {
-   void OnTriggerEnter2D(Collider2D col)
-    {
-        Debug.Log("trigger2");
-        //testing push
-        SceneManager.LoadScene("Bedroom_Shadow_Sprite_RH");
+    private bool triggerOn;
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.E) && triggerOn) {
+            SceneManager.LoadScene("Bedroom_Shadow_Sprite_RH");
+        }
     }
+
+
+    private void OnTriggerEnter2D ( Collider2D other )
+    {
+        triggerOn = true;
+    }
+
+    private void OnTriggerExit2D ( Collider2D other )
+    {
+        triggerOn = false;
+    }
+
 }

@@ -3,12 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class doorTrigger7 : MonoBehaviour
+public class doorTrigger7: MonoBehaviour
 {
-    void OnTriggerEnter2D(Collider2D col)
+    private bool triggerOn;
+    void Update() {
+        if(Input.GetKeyDown(KeyCode.E) && triggerOn) {
+            SceneManager.LoadScene("Bathroom_RH");
+        }
+    }
+
+
+    private void OnTriggerEnter2D ( Collider2D other )
     {
-        Debug.Log("trigger");
-        SceneManager.LoadScene("Bathroom_RH");
+        triggerOn = true;
+    }
+
+    private void OnTriggerExit2D ( Collider2D other )
+    {
+        triggerOn = false;
     }
 
 }
