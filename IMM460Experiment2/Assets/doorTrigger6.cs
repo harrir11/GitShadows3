@@ -8,7 +8,7 @@ public class doorTrigger6 : MonoBehaviour
     private bool triggerOn;
     void Update() {
         if(Input.GetKeyDown(KeyCode.E) && triggerOn) {
-            SceneManager.LoadScene("Bedroom_Shadow_Sprite_RH");
+            SceneManager.LoadScene("Bedroom_RH");
         }
     }
 

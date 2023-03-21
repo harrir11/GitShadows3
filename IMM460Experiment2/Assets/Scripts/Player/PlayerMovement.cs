@@ -19,6 +19,11 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject player;
 
+    void Start()
+    {
+        player = GameObject.FindWithTag("player");
+    }
+
     // Draw play area in the editor
     private void OnDrawGizmos()
     {
