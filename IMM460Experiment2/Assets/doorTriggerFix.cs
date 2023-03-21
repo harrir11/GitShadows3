@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class doorTrigger_fin2 : MonoBehaviour
+public class doorTriggerFix : MonoBehaviour
 {
     private bool triggerOn;
     void Update() {

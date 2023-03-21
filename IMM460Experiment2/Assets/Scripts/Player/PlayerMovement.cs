@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 targetPosition;
 
+    public GameObject player;
+
     // Draw play area in the editor
     private void OnDrawGizmos()
     {
@@ -50,14 +52,14 @@ public class PlayerMovement : MonoBehaviour
         // Move towards target position if inside play area
         if (IsPointInsidePlayArea(targetPosition))
         {
-            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            player.transform.position = Vector3.MoveTowards(player.transform.position, targetPosition, speed * Time.deltaTime);
         }
 
         // Move towards closest point on play area edge if outside play area
         if (!IsPointInsidePlayArea(targetPosition))
         {
             Vector3 closestPoint = GetClosestPoint(targetPosition);
-            transform.position = Vector3.MoveTowards(transform.position, closestPoint, speed * Time.deltaTime);
+            player.transform.position = Vector3.MoveTowards(player.transform.position, closestPoint, speed * Time.deltaTime);
         }
     }
 
