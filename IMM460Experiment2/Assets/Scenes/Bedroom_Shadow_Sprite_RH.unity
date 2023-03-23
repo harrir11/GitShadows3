@@ -2399,9 +2399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3be9cc1f324244a89d154d5221f0941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previousSceneName: Bedroom_RH
+  previousSceneName: Hallway_RH
   position: {x: 2.5, y: -2.7, z: 0.15}
-  player: {fileID: 0}
 --- !u!1 &1989997984
 GameObject:
   m_ObjectHideFlags: 0
