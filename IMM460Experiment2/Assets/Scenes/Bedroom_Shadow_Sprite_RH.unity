@@ -2460,11 +2460,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1975501013}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0836092a425b94c18a61dd86f201603f, type: 3}
+  m_Script: {fileID: 11500000, guid: 45364b221bc90492a95e8ea999a01c9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   brick: {fileID: 0}
+  spawnPoint: {fileID: 0}
 --- !u!114 &1975501020
 MonoBehaviour:
   m_ObjectHideFlags: 0

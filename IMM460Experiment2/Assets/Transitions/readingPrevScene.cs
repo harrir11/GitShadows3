@@ -7,6 +7,8 @@ public class readingPrevScene : MonoBehaviour
 {
     public GameObject player;
     public GameObject brick;
+    public Transform spawnPoint;
+
     private void Start()
     {
         player = GameObject.FindWithTag("player");
@@ -22,7 +24,8 @@ public class readingPrevScene : MonoBehaviour
 
             if(lastSceneIndex == 1 && currentSceneIndex == 8) {
                 Debug.Log("HALLWAY TO BEDROOM");
-                player.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
+                //player.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
+                player.transform.position = spawnPoint.position;
                 //brick.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
             }
         } else {
@@ -33,3 +36,4 @@ public class readingPrevScene : MonoBehaviour
 
 
 }
+
