@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindWithTag("player");
+        //targetPosition = this.transform.position;
     }
 
     // Draw play area in the editor

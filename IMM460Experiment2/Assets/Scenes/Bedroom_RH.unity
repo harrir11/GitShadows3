@@ -592,6 +592,8 @@ GameObject:
   m_Component:
   - component: {fileID: 711643527}
   - component: {fileID: 711643526}
+  - component: {fileID: 711643529}
+  - component: {fileID: 711643528}
   m_Layer: 0
   m_Name: placementScript
   m_TagString: Untagged
@@ -629,6 +631,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &711643528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711643525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0836092a425b94c18a61dd86f201603f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &711643529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711643525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2638fe9b536e4b57a0418b284abb79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &748673023
 GameObject:
   m_ObjectHideFlags: 0
@@ -2147,7 +2173,6 @@ GameObject:
   - component: {fileID: 2014006167}
   - component: {fileID: 2014006166}
   - component: {fileID: 2014006170}
-  - component: {fileID: 2014006171}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2326,18 +2351,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &2014006171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014006165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 300b6ed93d5e741e29822e2554d706dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2045442468
 GameObject:
   m_ObjectHideFlags: 0

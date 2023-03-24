@@ -495,7 +495,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &492993523
 GameObject:
@@ -633,7 +633,7 @@ GameObject:
   - component: {fileID: 708467034}
   m_Layer: 0
   m_Name: object_ex
-  m_TagString: Untagged
+  m_TagString: brick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2265,6 +2265,7 @@ GameObject:
   - component: {fileID: 1831176218}
   - component: {fileID: 1831176217}
   - component: {fileID: 1831176216}
+  - component: {fileID: 1831176220}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2355,6 +2356,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1831176220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1831176215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8babf63557870461faa99fabcfd3a8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSceneIndex: 0
+  previousScenePositions: 
 --- !u!1 &1975501013
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,6 +2380,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1975501015}
   - component: {fileID: 1975501016}
+  - component: {fileID: 1975501017}
+  - component: {fileID: 1975501018}
+  - component: {fileID: 1975501020}
+  - component: {fileID: 1975501019}
   m_Layer: 0
   m_Name: placementScript
   m_TagString: Untagged
@@ -2379,13 +2398,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975501013}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.905546, y: 8.93076, z: 2.246985}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.905546, y: 8.930759, z: 2.246985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1975501016
 MonoBehaviour:
@@ -2394,13 +2413,70 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975501013}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d3be9cc1f324244a89d154d5221f0941, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   previousSceneName: Hallway_RH
   position: {x: 2.5, y: -2.7, z: 0.15}
+  player: {fileID: 0}
+--- !u!114 &1975501017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975501013}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ce67979103040139104fcc2c8261e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousScenePositions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
+  defaultPositionIndex: 0
+--- !u!114 &1975501018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975501013}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8babf63557870461faa99fabcfd3a8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSceneIndex: 0
+  previousScenePositions: 
+--- !u!114 &1975501019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975501013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0836092a425b94c18a61dd86f201603f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  brick: {fileID: 0}
+--- !u!114 &1975501020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975501013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2638fe9b536e4b57a0418b284abb79b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1989997984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2635,7 +2711,6 @@ GameObject:
   - component: {fileID: 2014006167}
   - component: {fileID: 2014006166}
   - component: {fileID: 2014006170}
-  - component: {fileID: 2014006171}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -2814,18 +2889,6 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
---- !u!114 &2014006171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2014006165}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 300b6ed93d5e741e29822e2554d706dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2045442468
 GameObject:
   m_ObjectHideFlags: 0
@@ -3279,7 +3342,12 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2117790433
+--- !u!4 &2117790434 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
+  m_PrefabInstance: {fileID: 2093871186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2117790437
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3291,11 +3359,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300b6ed93d5e741e29822e2554d706dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2117790434 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
-  m_PrefabInstance: {fileID: 2093871186}
+  defaultPositionIndex: 0
+  previousSceneIndex: 0
+  previousScenePositions: []
+--- !u!114 &2117790440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117790412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8babf63557870461faa99fabcfd3a8f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSceneIndex: 0
+  previousScenePositions: 
 --- !u!1 &2125456275
 GameObject:
   m_ObjectHideFlags: 0
