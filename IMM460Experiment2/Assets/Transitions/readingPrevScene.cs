@@ -24,9 +24,14 @@ public class readingPrevScene : MonoBehaviour
 
             if(lastSceneIndex == 1 && currentSceneIndex == 8) {
                 Debug.Log("HALLWAY TO BEDROOM");
+                Debug.Log("spawnPoint position " + spawnPoint.position);
+                Debug.Log("player.transform.position " + player.transform.position);
+
                 //player.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
                 player.transform.position = spawnPoint.position;
                 //brick.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
+
+                Debug.Log("player.transform.position " + player.transform.position);
             }
         } else {
             Debug.Log("player is null?");
