@@ -8,7 +8,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementInventory : MonoBehaviour
 {
     public float speed = 5f;
     public Color playAreaColor = Color.green;
@@ -16,11 +16,11 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 targetPosition;
 
-    public GameObject player;
+    //public GameObject player;
 
     void Start()
     {
-        player = GameObject.FindWithTag("player");
+        //player = GameObject.FindWithTag("player");
 
         // Stops the player from going to the center of the screen upon running the game or switching to a new scene.
         targetPosition = this.transform.position;
@@ -59,16 +59,16 @@ public class PlayerMovement : MonoBehaviour
         // Move towards target position if inside play area
         if (IsPointInsidePlayArea(targetPosition))
         {
-            //transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
-            player.transform.position = Vector3.MoveTowards(player.transform.position, targetPosition, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            //player.transform.position = Vector3.MoveTowards(player.transform.position, targetPosition, speed * Time.deltaTime);
         }
 
         // Move towards closest point on play area edge if outside play area
         if (!IsPointInsidePlayArea(targetPosition))
         {
             Vector3 closestPoint = GetClosestPoint(targetPosition);
-            //transform.position = Vector3.MoveTowards(transform.position, closestPoint, speed * Time.deltaTime);
-            player.transform.position = Vector3.MoveTowards(player.transform.position, closestPoint, speed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, closestPoint, speed * Time.deltaTime);
+            //player.transform.position = Vector3.MoveTowards(player.transform.position, closestPoint, speed * Time.deltaTime);
         }
     }
 
