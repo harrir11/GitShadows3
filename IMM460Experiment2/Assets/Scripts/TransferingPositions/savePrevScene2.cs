@@ -3,10 +3,18 @@ using UnityEngine;
 
 public class savePrevScene2: MonoBehaviour
 {
-    private void OnDestroy()
+    public static int currentSceneIndex;
+    public static int staticLastSceneIndex;
+    
+    void OnDestroy()
     {
+        //room_counter++;
+        //Debug.Log(room_counter);
         // Save the build index of the current scene
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        PlayerPrefs.SetInt("LastSceneIndex", currentSceneIndex);
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        Debug.Log("curr scene from save prev Scene:" + currentSceneIndex);
+        staticLastSceneIndex = currentSceneIndex; 
+        Debug.Log("last scene from save prev Scene:" + staticLastSceneIndex);
+        //PlayerPrefs.SetInt("LastSceneIndex", currentSceneIndex);
     }
 }

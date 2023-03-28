@@ -9,8 +9,10 @@ public class readPrevScene2 : MonoBehaviour
     //public GameObject brick;
     public Transform spawnPoint;
     public Transform spawnPoint2;
+    public int room_counter;
+   // public savePrevScene2 savePrevScene;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.FindWithTag("player");
         //brick = GameObject.FindWithTag("brick");
@@ -19,8 +21,11 @@ public class readPrevScene2 : MonoBehaviour
         int lastSceneIndex = PlayerPrefs.GetInt("LastSceneIndex", 0);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        Debug.Log("lastSceneIndex" + lastSceneIndex);
-        Debug.Log("currentSceneIndex" + currentSceneIndex);
+        Debug.Log("lastSceneIndex (from playerPrefs): " + lastSceneIndex);
+        Debug.Log("currentSceneIndex " + currentSceneIndex);
+
+        Debug.Log("staticLastSceneIndex " + savePrevScene2.staticLastSceneIndex);
+
         //Debug.Log("HALLWAY TO BEDROOM");
 
             if(lastSceneIndex == 1 && currentSceneIndex == 8) {
@@ -30,6 +35,10 @@ public class readPrevScene2 : MonoBehaviour
                 //brick.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
             } else if(lastSceneIndex == 4 && currentSceneIndex == 8) {
                 Debug.Log("BASEMENT TO BEDROOM");
+
+                Debug.Log("spawnPoint2 position " + spawnPoint2.position);
+                Debug.Log("player.transform.position " + player.transform.position);
+
                 player.transform.position = spawnPoint2.position;
             }
         } else {
