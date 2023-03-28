@@ -8,8 +8,9 @@ public class readPrevScene2 : MonoBehaviour
     public GameObject player;
     //public GameObject brick;
     public Transform spawnPoint;
+    public Transform spawnPoint2;
 
-    private void Start()
+    private void Awake()
     {
         player = GameObject.FindWithTag("player");
         //brick = GameObject.FindWithTag("brick");
@@ -27,6 +28,9 @@ public class readPrevScene2 : MonoBehaviour
                 //player.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
                 player.transform.position = spawnPoint.position;
                 //brick.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
+            } else if(lastSceneIndex == 4 && currentSceneIndex == 8) {
+                Debug.Log("BASEMENT TO BEDROOM");
+                player.transform.position = spawnPoint2.position;
             }
         } else {
             Debug.Log("player is null?");
