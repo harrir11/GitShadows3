@@ -16,7 +16,7 @@ public class object_pickup : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
+        //Debug.Log(col.gameObject.name + " : " + gameObject.name + " : " + Time.time);
 
         pickUpAllowed = true;
         obj = col.gameObject;
@@ -25,7 +25,7 @@ public class object_pickup : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D col)
     {
-        Debug.Log("exit");
+        //Debug.Log("exit");
 
         pickUpAllowed = false;
     }

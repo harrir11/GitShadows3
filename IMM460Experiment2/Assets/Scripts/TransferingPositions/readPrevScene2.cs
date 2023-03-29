@@ -21,10 +21,14 @@ public class readPrevScene2 : MonoBehaviour
         int lastSceneIndex = PlayerPrefs.GetInt("LastSceneIndex", 0);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
 
-        Debug.Log("lastSceneIndex (from playerPrefs): " + lastSceneIndex);
-        Debug.Log("currentSceneIndex " + currentSceneIndex);
+        Debug.Log ("-----------READPREVSCENE2----------------");
 
-        Debug.Log("staticLastSceneIndex " + savePrevScene2.staticLastSceneIndex);
+        Debug.Log("lastSceneIndex (from playerPrefs): " + lastSceneIndex);
+        Debug.Log("currentSceneIndex: " + currentSceneIndex);
+
+        Debug.Log("staticLastSceneIndex (from static var in savePrevScene2):" + savePrevScene2.staticLastSceneIndex);
+
+        Debug.Log ("----------------------------------------");
 
         //Debug.Log("HALLWAY TO BEDROOM");
 
