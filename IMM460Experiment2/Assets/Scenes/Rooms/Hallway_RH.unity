@@ -266,6 +266,12 @@ MonoBehaviour:
   spawnPoint3: {fileID: 79647144}
   spawnPoint4: {fileID: 250937656}
   spawnPoint5: {fileID: 326812112}
+  spawnPoint6: {fileID: 0}
+  spawnPoint7: {fileID: 0}
+  spawnPoint8: {fileID: 0}
+  spawnPoint9: {fileID: 0}
+  spawnPoint10: {fileID: 0}
+  spawnPoint11: {fileID: 0}
 --- !u!1 &411523550
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,7 +1364,7 @@ MonoBehaviour:
   m_Intensity: 0.15
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: 71c65874a5eba58ceb3cfb3c
+  m_ApplyToSortingLayers: 71c65874a5eba58ceb3cfb3c1faad0b100000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
