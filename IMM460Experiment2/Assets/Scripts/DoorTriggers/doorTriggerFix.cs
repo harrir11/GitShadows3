@@ -5,9 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class doorTriggerFix : MonoBehaviour
 {
+    public static int currentSceneIndex;
     private bool triggerOn;
     void Update() {
         if(Input.GetKeyDown(KeyCode.E) && triggerOn) {
+            Debug.Log("HALLWAY TO BEDROOM DOOR");
+            currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            PlayerPrefs.SetInt("LastSceneIndexDoor", currentSceneIndex);
+            Debug.Log("LastSceneIndexDoor: " + currentSceneIndex);
             SceneManager.LoadScene("Bedroom_RH");
         }
     }

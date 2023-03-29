@@ -656,7 +656,6 @@ GameObject:
   m_Component:
   - component: {fileID: 711643527}
   - component: {fileID: 711643526}
-  - component: {fileID: 711643529}
   - component: {fileID: 711643528}
   m_Layer: 0
   m_Name: placementScript
@@ -704,24 +703,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 711643525}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cd1b87237d294ee8a15d239156b6681, type: 3}
+  m_Script: {fileID: 11500000, guid: 88eca0129a44c4df38bb2446db74e7b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   spawnPoint: {fileID: 2140017463}
   spawnPoint2: {fileID: 1066349760}
---- !u!114 &711643529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 711643525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9876a7ec403ef49ed8e010c816e6a527, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &748673023
 GameObject:
   m_ObjectHideFlags: 0
