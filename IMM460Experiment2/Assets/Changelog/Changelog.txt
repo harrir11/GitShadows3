@@ -1,0 +1,7 @@
+3-30-23 : Matt S
+- Located in Scene Bedroom_Origin_RH
+    - Added a new World Canvas for the Dialogue Buttons, named DialogueWorldCanvas
+        - Inside the Canvas is a panel that acts as the dialogue button, named Dialogue
+        - Attached is the script that is used to make this function
+            - The script can be found in the Dialogue folder, contained in the Script folder
+        - In the editor, you can input lines of text in the DialogueButton game object
