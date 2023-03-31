@@ -9,6 +9,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // NOTE: sometimes the playareapoints get deleted- if you see the player floating in mid-air, this is the problem
+// playAreaPoints
+//GenericPropertyJSON:{"name":"playAreaPoints","type":-1,"arraySize":4,"arrayType":"Vector2","children":[{"name":"Array","type":-1,"arraySize":4,"arrayType":"Vector2","children":[{"name":"size","type":12,"val":4},{"name":"data","type":8,"children":[{"name":"x","type":2,"val":-3.5},{"name":"y","type":2,"val":-1.5}]},{"name":"data","type":8,"children":[{"name":"x","type":2,"val":3.5},{"name":"y","type":2,"val":-1.5}]},{"name":"data","type":8,"children":[{"name":"x","type":2,"val":4.5},{"name":"y","type":2,"val":-3}]},{"name":"data","type":8,"children":[{"name":"x","type":2,"val":-4.5},{"name":"y","type":2,"val":-3}]}]}]}
 
 public class PlayerMovementOld : MonoBehaviour
 {
