@@ -8,6 +8,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// NOTE: sometimes the playareapoints get deleted- if you see the player floating in mid-air, this is the problem
+
 public class PlayerMovementOld : MonoBehaviour
 {
     public float speed = 5f;
