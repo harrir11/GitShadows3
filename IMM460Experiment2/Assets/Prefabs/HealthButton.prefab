@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3386378563965212944}
   - component: {fileID: 3386378563965212947}
   - component: {fileID: 3386378563965212946}
+  - component: {fileID: -505093713768238815}
   m_Layer: 5
   m_Name: HealthButton
   m_TagString: Untagged
@@ -121,3 +122,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-505093713768238815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386378563965212956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23fd7915f034e40e582f2c0f0221ada5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 1287567198586748271, guid: df63fd7180d924216b9c8c9d596cdf17, type: 3}
