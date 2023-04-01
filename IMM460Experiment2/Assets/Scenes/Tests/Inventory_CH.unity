@@ -385,8 +385,8 @@ SpriteShapeRenderer:
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   - {fileID: 21300000, guid: 608e61deb05c54660bebf5a4dd2ee02d, type: 3}
   m_LocalAABB:
-    m_Center: {x: 0.000011444092, y: -2.2400002, z: 0}
-    m_Extent: {x: 4.5034294, y: 0.7650005, z: 0}
+    m_Center: {x: -0.00014734268, y: -2.2400002, z: 0}
+    m_Extent: {x: 4.503588, y: 0.7650005, z: 0}
 --- !u!1 &531735765
 GameObject:
   m_ObjectHideFlags: 0
@@ -674,10 +674,10 @@ RectTransform:
   m_Father: {fileID: 199851329}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -35.6, y: -117.2}
-  m_SizeDelta: {x: 31.223, y: 31.223}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -35.6, y: 52.800003}
+  m_SizeDelta: {x: 31.223, y: 31.222992}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1175896643
 MonoBehaviour:
