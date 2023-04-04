@@ -25,7 +25,7 @@ public class ReadPrevSceneDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
         Debug.Log("ReadPrevSceneDoor");
         int lastSceneIndexDoor = PlayerPrefs.GetInt("LastSceneIndexDoor", 0);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
