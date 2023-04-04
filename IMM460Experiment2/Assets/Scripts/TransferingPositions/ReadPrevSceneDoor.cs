@@ -33,12 +33,12 @@ public class ReadPrevSceneDoor : MonoBehaviour
         Debug.Log("lastSceneIndexDoor (from playerPrefs): " + lastSceneIndexDoor);
         Debug.Log("currentSceneIndex: " + currentSceneIndex);
 
-        if(lastSceneIndexDoor == 1 && currentSceneIndex == 8) {
+        if(lastSceneIndexDoor == 1 && currentSceneIndex == 10) {
                 Debug.Log("HALLWAY TO BEDROOM");
                 //player.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
                 player.transform.position = spawnPoint.position;
                 //brick.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
-        } else if(lastSceneIndexDoor == 4 && currentSceneIndex == 8) {
+        } else if(lastSceneIndexDoor == 4 && currentSceneIndex == 10) {
                 Debug.Log("BASEMENT TO BEDROOM");
 
                 Debug.Log("spawnPoint2 position " + spawnPoint2.position);
