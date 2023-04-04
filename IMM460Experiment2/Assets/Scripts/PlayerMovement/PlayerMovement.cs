@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
 
         // Stops the player from going to the center of the screen upon running the game or switching to a new scene.
         targetPosition = this.transform.position;

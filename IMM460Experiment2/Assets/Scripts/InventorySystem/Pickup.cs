@@ -18,12 +18,15 @@ public class Pickup : MonoBehaviour
     {
         // get a reference to the Inventory component of the player
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+        //inventory = GameObject.FindGameObjectWithTag("player").GetComponent<Inventory>();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player")) // check if the player has collided with the pickup object
+        //if (other.CompareTag("player")) // check if the player has collided with the pickup object
         {
+            Debug.Log("Player collide with object");
             // spawn the item button at the first available inventory slot
             for (int i = 0; i < inventory.slots.Length; i++) // loop through all inventory slots
             {

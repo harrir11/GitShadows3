@@ -1,3 +1,7 @@
+//Rebecca Harris
+//April 2nd, 2023
+//Script is attached to: placementScript object in every scene
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +45,7 @@ public class ReadPrevSceneDoor : MonoBehaviour
                 Debug.Log("player.transform.position " + player.transform.position);
 
                 player.transform.position = spawnPoint2.position;
-        } else if(lastSceneIndexDoor == 2 || lastSceneIndexDoor == 8 && currentSceneIndex == 1) {
+        } else if(lastSceneIndexDoor == 2 || lastSceneIndexDoor == 8 || lastSceneIndexDoor == 9 && currentSceneIndex == 1) {
                 Debug.Log("BEDROOM TO HALLWAY");
 
                 Debug.Log("spawnPoint3 position " + spawnPoint3.position);
