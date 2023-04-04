@@ -4,7 +4,6 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - HealthBar
   - player
   layers:
   - Default
@@ -57,6 +56,9 @@ TagManager:
     locked: 0
   - name: Doors
     uniqueID: 2983242271
+    locked: 0
+  - name: shadow
+    uniqueID: 1416947125
     locked: 0
   - name: Player
     uniqueID: 1951975025

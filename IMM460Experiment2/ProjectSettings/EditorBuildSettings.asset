@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Rooms/Hallway_RH.unity
     guid: 19218783491e44b1598bbc7fba155cd0
   - enabled: 1
-    path: Assets/Scenes/Rooms/Bedroom_Origin_RH.unity
+    path: Assets/Scenes/Rooms/Old_Bedroom_Origin_RH.unity
     guid: ece721eafad874543b157706bb1ff6e9
   - enabled: 1
     path: Assets/Scenes/Rooms/Kitchen_RH.unity
@@ -30,6 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Tests/StaircasetoRoom_RH.unity
     guid: 7f2276608efd846088720eb0c1d3d787
   - enabled: 1
-    path: Assets/Scenes/Rooms/Bedroom_RH.unity
+    path: Assets/Scenes/Rooms/Old_Bedroom_RH.unity
     guid: 9c3314647aad043caa43cabcda9e4f46
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Bedroom_Origin_RH.unity
+    guid: 6c8a05a5c36cb4bfd86a239df84f1ff0
+  - enabled: 1
+    path: Assets/Scenes/Rooms/Bedroom_RH.unity
+    guid: f022dd1a1042b4dea890ec0a140cc783
   m_configObjects: {}

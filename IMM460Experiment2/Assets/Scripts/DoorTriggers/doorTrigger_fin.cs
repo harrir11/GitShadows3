@@ -1,3 +1,6 @@
+//Rebecca Harris
+//April 2nd, 2023
+//Script is attached to: bedroom_origin door
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

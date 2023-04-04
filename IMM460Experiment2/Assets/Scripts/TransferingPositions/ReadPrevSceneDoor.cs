@@ -1,3 +1,7 @@
+//Rebecca Harris
+//April 2nd, 2023
+//Script is attached to: placementScript object in every scene
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,7 +25,7 @@ public class ReadPrevSceneDoor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindWithTag("player");
+        player = GameObject.FindWithTag("Player");
         Debug.Log("ReadPrevSceneDoor");
         int lastSceneIndexDoor = PlayerPrefs.GetInt("LastSceneIndexDoor", 0);
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -29,19 +33,19 @@ public class ReadPrevSceneDoor : MonoBehaviour
         Debug.Log("lastSceneIndexDoor (from playerPrefs): " + lastSceneIndexDoor);
         Debug.Log("currentSceneIndex: " + currentSceneIndex);
 
-        if(lastSceneIndexDoor == 1 && currentSceneIndex == 8) {
+        if(lastSceneIndexDoor == 1 && currentSceneIndex == 10) {
                 Debug.Log("HALLWAY TO BEDROOM");
                 //player.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
                 player.transform.position = spawnPoint.position;
                 //brick.transform.position = new Vector3(2.4f,-2.70000005f,0.150000006f);
-        } else if(lastSceneIndexDoor == 4 && currentSceneIndex == 8) {
+        } else if(lastSceneIndexDoor == 4 && currentSceneIndex == 10) {
                 Debug.Log("BASEMENT TO BEDROOM");
 
                 Debug.Log("spawnPoint2 position " + spawnPoint2.position);
                 Debug.Log("player.transform.position " + player.transform.position);
 
                 player.transform.position = spawnPoint2.position;
-        } else if(lastSceneIndexDoor == 2 || lastSceneIndexDoor == 8 && currentSceneIndex == 1) {
+        } else if(lastSceneIndexDoor == 2 || lastSceneIndexDoor == 8 || lastSceneIndexDoor == 9 && currentSceneIndex == 1) {
                 Debug.Log("BEDROOM TO HALLWAY");
 
                 Debug.Log("spawnPoint3 position " + spawnPoint3.position);
