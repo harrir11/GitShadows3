@@ -4955,6 +4955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  GameController: {fileID: 492993523}
   sanityBar: {fileID: 102131672}
 --- !u!50 &2117790428
 Rigidbody2D:
