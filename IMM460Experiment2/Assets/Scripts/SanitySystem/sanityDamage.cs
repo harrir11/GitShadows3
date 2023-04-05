@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class sanityDamage : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    public float maxHealth = 100f;
+    public float currentHealth;
+    public GameObject GameController;
 
     public sanityBar sanityBar;
 
@@ -19,15 +21,17 @@ public class sanityDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) 
-        {
-            TakeDamage(20);
-        }
+        TakeDamage(0.002f); 
     }
 
-    void TakeDamage(int damage)
+    void TakeDamage(float damage)
     {
         currentHealth -= damage;
         sanityBar.SetHealth(currentHealth);
+        if(currentHealth <= 0) {
+            Destroy(GameController);
+
+            SceneManager.LoadScene("Bedroom_Origin_RH");
+        }
     }
 }
