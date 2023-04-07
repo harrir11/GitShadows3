@@ -7,6 +7,8 @@ TagManager:
   - player
   - mouse
   - collectible
+  - interactable
+  - portal
   layers:
   - Default
   - TransparentFX
