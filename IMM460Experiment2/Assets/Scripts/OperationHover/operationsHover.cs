@@ -1,3 +1,7 @@
+//MATTHEW STOKES
+//RESOURCES USED: 
+// https://youtu.be/0jTPKz3ga4w
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,11 +25,12 @@ public class operationsHover : MonoBehaviour
     */
     private Transform cursorPos;
     private SpriteRenderer mouseDisplay;
+    [SerializeField] private Camera mainCamera;
 
     void Awake()
     {
         DontDestroyOnLoad(this.gameObject);//carries gameobject on scene change
-        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.lockState = CursorLockMode.Locked;
     }
     // Start is called before the first frame update
     void Start()
@@ -37,7 +42,10 @@ public class operationsHover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        Vector3 mousePos = Input.mousePosition;
-        cursorPos.position = mousePos;
+        Vector3 mouseWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        mouseWorldPosition.z = 0f;
+        cursorPos.position = mouseWorldPosition;
+        //Vector3 mousePos = Input.mousePosition;
+        //cursorPos.position = mousePos;
     }
 }
