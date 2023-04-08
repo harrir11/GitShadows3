@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - player
+  - mouse
+  - collectible
+  - interactable
+  - portal
   layers:
   - Default
   - TransparentFX
