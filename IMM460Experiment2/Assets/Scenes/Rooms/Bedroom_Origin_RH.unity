@@ -4826,6 +4826,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1494929355}
+    - target: {fileID: 2499112019243939933, guid: 0c68275d2cf64514aa5e2dbb732ed57a, type: 3}
+      propertyPath: mouseInteractable
+      value: 
+      objectReference: {fileID: 2800000, guid: 5770d4e4ad89a714985dae2622981a93, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c68275d2cf64514aa5e2dbb732ed57a, type: 3}
 --- !u!1 &2056810998
