@@ -1,6 +1,7 @@
 //MATTHEW STOKES
 //RESOURCES USED: 
 // https://youtu.be/0jTPKz3ga4w
+// https://youtu.be/ELhg7ge2rIA
 
 using System.Collections;
 using System.Collections.Generic;
@@ -21,7 +22,15 @@ public class operationsHover : MonoBehaviour
     */
     private Transform cursorPos;
     private SpriteRenderer mouseDisplay;
-    [SerializeField] private Camera mainCamera;
+    [SerializeField] private Camera mainCamera; //place main camera
+    
+    //Below are mouse texture variables
+    [SerializeField] private Texture2D mouseIdle;
+    [SerializeField] private Texture2D mouseCollectible;
+    [SerializeField] private Texture2D mousePortal;
+    [SerializeField] private Texture2D mouseInteractable;
+    private Vector2 cursorHotspot;
+
 
     void Awake()
     {
@@ -33,6 +42,10 @@ public class operationsHover : MonoBehaviour
     {
         cursorPos = GetComponent<Transform>(); //gets transform
         mouseDisplay = GetComponent<SpriteRenderer>(); //gets sprite renderer component
+
+        //Set Mouse Texture
+        cursorHotspot = new Vector2(mouseIdle.width/2, mouseIdle.height/2);
+        Cursor.SetCursor(mouseIdle, cursorHotspot, CursorMode.Auto);
     }
 
     // Update is called once per frame
@@ -47,39 +60,53 @@ public class operationsHover : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col){
         Collider2D tag = col.GetComponent<Collider2D>();
-        //If mouse is over a door, should turn green
+        //If mouse is over a door, should turn into a Door Icon
         if(tag.CompareTag("portal")){
-            mouseDisplay.color = Color.green;
+            //mouseDisplay.color = Color.green;
+            cursorHotspot = new Vector2(mousePortal.width/2, mousePortal.height/2);
+            Cursor.SetCursor(mousePortal, cursorHotspot, CursorMode.Auto);
         }
-        //If mouse is over an interactable, should turn blue
+        //If mouse is over an interactable, should turn into a Magnifying Glass Icon
         if (tag.CompareTag("interactable")){
-            mouseDisplay.color = Color.blue;
+            //mouseDisplay.color = Color.blue;
+            cursorHotspot = new Vector2(mouseInteractable.width/2, mouseInteractable.height/2);
+            Cursor.SetCursor(mouseInteractable, cursorHotspot, CursorMode.Auto);
         }
-        //If mouse is over a collectible, should turn red
+        //If mouse is over a collectible, should turn a chest icon
         if (tag.CompareTag("collectible")){
-            mouseDisplay.color = Color.red; 
+            //mouseDisplay.color = Color.red; 
+            cursorHotspot = new Vector2(mouseCollectible.width/2, mouseCollectible.height/2);
+            Cursor.SetCursor(mouseCollectible, cursorHotspot, CursorMode.Auto);
         }
     }
 
     //just in case frame skips while hovering over object
     void OnTriggerStay2D(Collider2D col){
         Collider2D tag = col.GetComponent<Collider2D>();
-        //If mouse is over a door, should turn green
+        //If mouse is over a door, should turn into a Door Icon
         if(tag.CompareTag("portal")){
-            mouseDisplay.color = Color.green;
+            //mouseDisplay.color = Color.green;
+            cursorHotspot = new Vector2(mousePortal.width/2, mousePortal.height/2);
+            Cursor.SetCursor(mousePortal, cursorHotspot, CursorMode.Auto);
         }
-        //If mouse is over an interactable, should turn blue
+        //If mouse is over an interactable, should turn into a Magnifying Glass Icon
         if (tag.CompareTag("interactable")){
-            mouseDisplay.color = Color.blue;
+            //mouseDisplay.color = Color.blue;
+            cursorHotspot = new Vector2(mouseInteractable.width/2, mouseInteractable.height/2);
+            Cursor.SetCursor(mouseInteractable, cursorHotspot, CursorMode.Auto);
         }
-        //If mouse is over a collectible, should turn red
+        //If mouse is over a collectible, should turn a chest icon
         if (tag.CompareTag("collectible")){
-            mouseDisplay.color = Color.red; 
+            //mouseDisplay.color = Color.red; 
+            cursorHotspot = new Vector2(mouseCollectible.width/2, mouseCollectible.height/2);
+            Cursor.SetCursor(mouseCollectible, cursorHotspot, CursorMode.Auto);
         }
     }
 
     void OnTriggerExit2D(Collider2D col){
-        //if mouse exits collider, should turn back to normal color
-        mouseDisplay.color = Color.white; 
+        //if mouse exits collider, should turn back to normal icon
+        //mouseDisplay.color = Color.white; 
+        cursorHotspot = new Vector2(mouseIdle.width/2, mouseIdle.height/2);
+        Cursor.SetCursor(mouseIdle, cursorHotspot, CursorMode.Auto);
     }
 }
