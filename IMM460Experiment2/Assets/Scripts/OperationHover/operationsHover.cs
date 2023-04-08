@@ -15,13 +15,9 @@ public class operationsHover : MonoBehaviour
         GREEN: PORTAL, DOOR, TRAPDOOR
         BLUE: INTERACTABLE
 
-        CIRCLE SHOULD MOVE WITH MOUSE POSITION
-
-        CURSOR GOES OFF SCREEN
-        NEED TO FIND SOME WAY TO KEEP IT LOCKED IN SCREEN
-        ADJUST SENSITIVITY
-        https://docs.unity3d.com/ScriptReference/Cursor-lockState.html
-        LOOK INTO THIS MORE?
+        MAIN CAMERA DOES NOT EXIST WHEN IT CHANGES SCENES
+        TURN MOUSE CURSOR INTO PREFAB AND PLACE IT INTO EVERY SCENE
+        AS TO ADJUST TO THE CAMERA OF EVERY SCENE
     */
     private Transform cursorPos;
     private SpriteRenderer mouseDisplay;
@@ -47,5 +43,26 @@ public class operationsHover : MonoBehaviour
         cursorPos.position = mouseWorldPosition;
         //Vector3 mousePos = Input.mousePosition;
         //cursorPos.position = mousePos;
+    }
+
+    void OnTriggerEnter2D(Collider2D col){
+        Collider2D tag = col.GetComponent<Collider2D>();
+        //If mouse is over a door, should turn green
+        if(tag.CompareTag("portal")){
+            mouseDisplay.color = Color.green;
+        }
+        //If mouse is over an interactable, should turn blue
+        if (tag.CompareTag("interactable")){
+            mouseDisplay.color = Color.blue;
+        }
+        //If mouse is over a collectible, should turn red
+        if (tag.CompareTag("collectible")){
+            mouseDisplay.color = Color.red; 
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col){
+        //if mouse exits collider, should turn back to normal color
+        mouseDisplay.color = Color.white; 
     }
 }
