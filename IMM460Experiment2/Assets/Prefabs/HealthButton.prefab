@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3386378563965212947}
   - component: {fileID: 3386378563965212946}
   - component: {fileID: -505093713768238815}
+  - component: {fileID: 6896216868678771258}
   m_Layer: 5
   m_Name: HealthButton
   m_TagString: Untagged
@@ -121,7 +122,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3386378563965212947}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3386378563965212956}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &-505093713768238815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,3 +148,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 1287567198586748271, guid: df63fd7180d924216b9c8c9d596cdf17, type: 3}
+--- !u!114 &6896216868678771258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386378563965212956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0c12474b28fa4cbeab4372847b24d94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
