@@ -42,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
             isFacingRight = true;
         } else {
             isFacingRight = PlayerPrefs.GetInt("isFacingRight", 1) == 1;
+            Debug.Log("isFacingRight: " + isFacingRight);
         }
         
     }
