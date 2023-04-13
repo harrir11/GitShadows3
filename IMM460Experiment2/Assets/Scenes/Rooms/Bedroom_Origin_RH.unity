@@ -856,6 +856,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cecba4cba1d4bd68446cafd09f3c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFacingRight: 0
+  movementThreshold: 0.1
   speed: 8
   playAreaColor: {r: 0, g: 1, b: 0, a: 1}
   playAreaPoints:
@@ -968,7 +970,7 @@ GameObject:
   - component: {fileID: 263500866}
   - component: {fileID: 263500865}
   m_Layer: 5
-  m_Name: CanvasUI
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5917,7 +5919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1171565265889029938, guid: 2498bfbb9520b11498708432df740249, type: 3}
       propertyPath: m_SortingLayer
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1171565265889029938, guid: 2498bfbb9520b11498708432df740249, type: 3}
       propertyPath: m_SortingLayerID
@@ -5926,6 +5928,14 @@ PrefabInstance:
     - target: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6041,7 +6051,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 8, y: 8}
+    oldSize: {x: 1.34, y: 4.230868}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
