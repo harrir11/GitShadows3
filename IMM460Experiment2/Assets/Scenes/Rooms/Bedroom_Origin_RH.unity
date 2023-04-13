@@ -856,6 +856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cecba4cba1d4bd68446cafd09f3c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFacingRight: 0
   movementThreshold: 0.1
   speed: 8
   playAreaColor: {r: 0, g: 1, b: 0, a: 1}
@@ -4832,7 +4833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.72
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 1171565265889029939, guid: 2498bfbb9520b11498708432df740249, type: 3}
       propertyPath: m_LocalPosition.y
