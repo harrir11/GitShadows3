@@ -521,6 +521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44cecba4cba1d4bd68446cafd09f3c46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isFacingRight: 0
+  movementThreshold: 0.1
   speed: 8
   playAreaColor: {r: 0, g: 1, b: 0, a: 1}
   playAreaPoints:
@@ -3803,7 +3805,7 @@ SpriteShapeRenderer:
   m_SortingLayerID: -1311725025
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Color: {r: 0.103773594, g: 0.037324227, b: 0.01517444, a: 1}
+  m_Color: {r: 0.16862746, g: 0.16862746, b: 0.16862746, a: 1}
   m_MaskInteraction: 0
   m_ShapeTexture: {fileID: 2800000, guid: b281b91a70a624a0da1c43adc1c30c7b, type: 3}
   m_Sprites:
