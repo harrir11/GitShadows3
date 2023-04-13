@@ -7,9 +7,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool isFacingRight;
+
+    private Vector3 previousPosition;
+    public float movementThreshold = 0.1f;
+
     public float speed = 5f;
     public Color playAreaColor = Color.green;
     public Vector2[] playAreaPoints;
@@ -17,13 +23,27 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 targetPosition;
 
     public GameObject player;
+    private Animator playerAnimator;
+
+    bool isMoving;
 
     void Start()
     {
         player = GameObject.FindWithTag("Player");
+        playerAnimator = player.GetComponent<Animator>();
 
         // Stops the player from going to the center of the screen upon running the game or switching to a new scene.
         targetPosition = this.transform.position;
+
+        previousPosition = player.transform.position;
+        isMoving = false;
+
+        if (SceneManager.GetActiveScene().buildIndex == 9) {
+            isFacingRight = true;
+        } else {
+            isFacingRight = PlayerPrefs.GetInt("isFacingRight", 1) == 1;
+        }
+        
     }
 
     // Draw play area in the editor
@@ -41,8 +61,42 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void Flip()
+    {
+        isFacingRight = !isFacingRight; // Invert the flag
+        PlayerPrefs.SetInt("isFacingRight", isFacingRight ? 1 : 0);
+
+        // Get the object's current scale
+        Vector3 theScale = player.transform.localScale;
+
+        // Flip the object around by inverting the X scale
+        theScale.x *= -1;
+        player.transform.localScale = theScale;
+    }
+
     private void Update()
     {
+        
+        //Tells if the player is moving in the script
+        isMoving = player.transform.position != previousPosition;
+        previousPosition = player.transform.position;
+
+        if(player.transform.position.x > targetPosition.x && isFacingRight) {
+            Debug.Log("player is going left");
+            Flip();
+        } else if (player.transform.position.x < targetPosition.x && !isFacingRight){
+            Debug.Log("player is going right"); 
+            Flip();
+        }
+
+        //Debug.Log(isMoving);
+
+        if(isMoving) {
+            playerAnimator.SetBool("walking", true);
+        } else {
+            playerAnimator.SetBool("walking", false);
+        }
+
         // Get target position on mouse click
         if (Input.GetMouseButton(0))
         {
@@ -56,11 +110,16 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+
         // Move towards target position if inside play area
         if (IsPointInsidePlayArea(targetPosition))
         {
             //transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
             player.transform.position = Vector3.MoveTowards(player.transform.position, targetPosition, speed * Time.deltaTime);
+            //Debug.Log("player is walking!!");
+            
+        } else {
+            //Debug.Log("player is NOT walking - idle");
         }
 
         // Move towards closest point on play area edge if outside play area
@@ -69,6 +128,10 @@ public class PlayerMovement : MonoBehaviour
             Vector3 closestPoint = GetClosestPoint(targetPosition);
             //transform.position = Vector3.MoveTowards(transform.position, closestPoint, speed * Time.deltaTime);
             player.transform.position = Vector3.MoveTowards(player.transform.position, closestPoint, speed * Time.deltaTime);
+            //Debug.Log("~player is walking!!");
+            
+        } else {
+            //Debug.Log("~player is NOT walking - idle");
         }
     }
 
