@@ -9,4 +9,8 @@ void Awake()
     DontDestroyOnLoad(transform.gameObject);
 }
 
+void switchPress() {
+    Debug.Log("switchPressed");
+}
+
 }

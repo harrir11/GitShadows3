@@ -150,4 +150,4 @@ MonoBehaviour:
   mouseIdle: {fileID: 2800000, guid: 47b9d89eae3d9e5498ecc5cf33d96626, type: 3}
   mouseCollectible: {fileID: 2800000, guid: c8bf53e93f224fc479e514b722e12bf4, type: 3}
   mousePortal: {fileID: 2800000, guid: 1e37ff97d883fd24db85ac8f9d19c184, type: 3}
-  mouseInteractible: {fileID: 2800000, guid: 5770d4e4ad89a714985dae2622981a93, type: 3}
+  mouseInteractable: {fileID: 2800000, guid: 5770d4e4ad89a714985dae2622981a93, type: 3}

@@ -34,7 +34,7 @@ public class operationsHover : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(this.gameObject);//carries gameobject on scene change
+        //DontDestroyOnLoad(this.gameObject);//carries gameobject on scene change
         //Cursor.lockState = CursorLockMode.Locked;
     }
     // Start is called before the first frame update
