@@ -20,6 +20,7 @@ public class pauseMenu : MonoBehaviour
     {
         DontDestroyOnLoad(this.gameObject);//carries gameobject on scene change
         DontDestroyOnLoad(pauseCanvas);//carries gameobject on scene change
+        DontDestroyOnLoad(pausePanel);//carries gameobject on scene change
     }
     // Update is called once per frame
     void Update()
