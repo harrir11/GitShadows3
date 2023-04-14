@@ -83,7 +83,7 @@ public class PlayerMovementOld : MonoBehaviour
         isMoving = transform.position != previousPosition;
         previousPosition = transform.position;
 
-        Debug.Log(isMoving);
+        // Debug.Log(isMoving);
     }
 
     // Check if a point is inside the play area using the ray casting algorithm
